@@ -125,9 +125,7 @@ $form->addButton("§eSmall");
 $form->addButton("§bNormal");
 $form->addButton("§cBig");
 $form->sendToPlayer($player);
-}
 } else {
 $player->sendMessage("§8[§eCF§8] §c You do not have permissions to use");
-
-
+}
 }
