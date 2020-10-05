@@ -7,7 +7,10 @@ use pocketmine\{Player, Server};
 use CF\Forms\{CustomForm, SimpleForm, ModalForm};
 
 class FormsManager {
-  
+
+/**
+* @var Code SrClau
+**/ 
 public static function getCosmetic(Player $player){
 $form = new SimpleForm(function (Player $player, int $data = null){
 if($data === null){
@@ -33,6 +36,9 @@ $form->addButton("§eNickName"."\n"."§7Click here");
 $form->sendToPlayer($player);
 }
   
+/**
+* @var Code iFail90
+**/ 
 public static function getGames(Player $player){
 $form = new SimpleForm(function (Player $player, int $data = null){
 $resultado = $data;
@@ -54,6 +60,9 @@ $form->addButton("Game 5");
 $form->sendToPlayer($player);
 }
 
+/**
+* @var Code iFail90
+**/ 
 public static function getInfo(Player $player){
 $form = new SimpleForm (function (Player $player, int $data = null){
 $resultado = $data
@@ -73,6 +82,9 @@ $form->addButton("Ranks");
 $form->sendToPlayer($player);
 }
 
+/**
+* @var Code SrClau
+**/
 public static function getFly(Player $player){
 
 }
