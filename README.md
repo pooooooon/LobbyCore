@@ -3,10 +3,11 @@
 	<br>
     </a>
     <br><br>
-    <h3>Instrucciones:</h3>
+    <h3>Help:</h3>
     <p> <p>
-    <h3>Dependencias:</h3>
+    <h3>Depends:</h3>
     <p> </p>
-    <h3>Comandos:</h3>
+    <h3>Commands:</h3>
  </p>/core help: Commads Help <p>
+<h3>No Install Beta</h3>
 </div>
