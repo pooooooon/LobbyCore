@@ -73,6 +73,8 @@ $form->setContent("General Information");
 $form->addButton("My Profile");
 $form->addButton("Server");
 $form->addButton("Ranks");
+$form->sendToPlayer($player);
+}
 
 
   
