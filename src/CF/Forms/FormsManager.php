@@ -19,7 +19,7 @@ case 0:
 break;
 }
 });
-$form->setTitle("§bCosmetics UI");
+$form->setTitle("§b§kB§r§aCosmetics§b§kB§r §eUI");
 $form->setContent("§aChoose a cosmetic");
 $form->addButton("§eFly"."\n"."§7Click here");
 $form->addButton("§eSize"."\n"."§7Click here");
