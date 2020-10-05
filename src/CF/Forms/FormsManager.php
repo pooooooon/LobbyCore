@@ -34,7 +34,6 @@ $form->sendToPlayer($player);
 }
   
 public static function getGames(Player $player){
-public static function getAjustes(Player $player){
 $form = new SimpleForm(function (Player $player, int $data = null){
 $resultado = $data;
 if($resultado === null){
