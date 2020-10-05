@@ -86,8 +86,14 @@ $form->sendToPlayer($player);
 *@var Code SrClau
 **/
 public static function getFly(Player $player){
-
-}
-
-}
-  
+if($player->getAllowFlight()){
+$player->setFlying(false);
+$player->setAllowFlight(false);
+$player->sendMessage("§cFly Disabled");
+} else {
+$player->setFlying(true);
+$player->setAllowFlight(true);
+$player->sendMessage("§aFly Enabled");
+                 }
+          }
+  }
