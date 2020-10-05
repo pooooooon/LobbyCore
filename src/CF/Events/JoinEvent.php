@@ -18,6 +18,9 @@ use pocketmine\level\{Position, Level};
 
 class EventJoin implements LT {
 
+public function onJoinEvent(PlayerJoinEvent $event){
+$player = $event->getPlayer();
+}
 
 }
 ?>
