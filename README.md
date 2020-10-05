@@ -5,7 +5,7 @@
     </a>
     <br><br>
  <p>Complement for PocketMine-MP <br> <div align="left">
-<img src="https://1000marcas.net/wp-content/uploads/2020/01/Minecraft-Logo.png" width="100%" height="50%"> <p>
+<img src="https://img.apksum.com/36/io.scer.pocketmine/2.2.0/icon.png" width="100%" height="50%"> <p>
 <br>
 
 </div>
