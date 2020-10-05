@@ -5,5 +5,5 @@ branches:
 projects:
   LobbyCore:
     path: ""
-    icon: "resources\images\icon.png"
+    icon: "resources/images/icon.png"
 ...
