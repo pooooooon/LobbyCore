@@ -133,3 +133,19 @@ $form->sendToPlayer($player);
 $player->sendMessage("§8[§eCF§8] §cYou do not have permissions to use");
 }
 }
+
+ public static function getNickName(Player $player){
+ $form = new CustomForm(function (Player $player, array $data = null){
+ if($data == null){
+ self::getNickName($player);
+return true;
+}
+$player->setDisplayName("$data[0]");
+$player->setNameTag("$data[0]");
+$player->sendMessage("§8[§eCF§8] §aYou have changed your name to ".$data[0]);
+});
+$form->setTitle("§aNickName");
+$form->addInput("Choose the name that you like the most", "Fail And Clau");
+$form->sendToPlayer($player);
+}
+
