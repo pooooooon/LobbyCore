@@ -98,6 +98,7 @@ $player->sendMessage("§aFly Enabled");
           }
 
 public static function getSize(Player $player){
+if($player->hasPermission("size.core")){
 $form = new SimpleForm (function (Player $player, int $data = null){
 $resultado = $data;
 if($resultado === null){
@@ -116,6 +117,7 @@ case 2:
 $player->setScale(0.5);
 $player->sendMessage ("§cBig Size Selected");
 break;
+}
 });
 $form->setTitle("§aSize");
 $form->setContent("§eSelect The Size You Like");
@@ -123,4 +125,9 @@ $form->addButton("§eSmall");
 $form->addButton("§bNormal");
 $form->addButton("§cBig");
 $form->sendToPlayer($player);
+}
+} else {
+$player->sendMessage("§8[§eCF§8] §c You do not have permissions to use");
+
+
 }
