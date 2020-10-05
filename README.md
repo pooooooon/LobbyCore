@@ -1,4 +1,4 @@
-<a align="center"><img src="https://github.com/SrClau/Lobby/blob/main/icon.png"></img></a>
+<a align="center"><img src="https://github.com/SrClau/LobbyCore/blob/main/icon.png"></img></a>
 <div align="left">
 <img src="https://1000marcas.net/wp-content/uploads/2020/01/Minecraft-Logo.png" width="100%" height="50%">
 	<br>
