@@ -44,8 +44,8 @@ case 0:
 break;
 }
 });
-$form->setTitle("Title");
-$form->setContent("Content");
+$form->setTitle("Games");
+$form->setContent("Select You Favorite Game");
 $form->addButton("Game 1");
 $form->addButton("Game 2");
 $form->addButton("Game 3");
@@ -58,18 +58,21 @@ $form->sendToPlayer($player);
   }
 
 public static function getInfo(Player $player){
-  
-  }
-
-public static function getFly(Player $player){
-if($player->getAllowFlight()){
-$player->setFlying(false);
-$player->setAllowFlight(false);
-$player->sendMessage("§8[§eCF§8] §cFly Disabled");
-}else{
-$player->setFlying(true);
-$player->setAllowFlight(true);
-$player->sendMessage("§8[§eCF§8] §aFly Enabled");
-                    }
-               }
+$form = new SimpleForm (function (Player $player, int $data = null){
+$resultado = $data
+if($resultado === null){
+return true;
 }
+switch ($resultado){
+case 0:
+break;
+}
+});
+$form->setTitle("Information");
+$form->setContent("General Information");
+$form->addButton("My Profile");
+$form->addButton("Server");
+$form->addButton("Ranks");
+
+
+  
