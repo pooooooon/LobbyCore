@@ -27,6 +27,7 @@ $this->setItems($this->player);
 public function setItems(Player $player){
 $inventory = $player->getInventory();
 $inventory->setItem(5, Item::get(345, 0, 1)->setCustomName("§1§kA§r§bTravel§1§kA"));
+$inventory->setItem(0, Item::get(234, 0, 1)->setCustomName("§3§kB§r§aCosmetics§3§kB"));
 }
 }
 ?>
