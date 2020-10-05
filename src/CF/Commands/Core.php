@@ -5,7 +5,7 @@ namespace CF\Comandos;
 use CF\Main;
 use pocketmine\command\{CommandSender, Command, PluginCommand};
 use pocketmine\utils\TextFormat as Text;
-use pocketmine\
+use CF\Forms\{FormsManager};
 
 class Core extends PluginCommand {
 
