@@ -72,5 +72,5 @@ $player->setAllowFlight(true);
 $player->sendMessage("§8[§eCF§8] §aFly Enabled");
 }
 
-
+}
   
