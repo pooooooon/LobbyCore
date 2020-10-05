@@ -86,6 +86,7 @@ $form->sendToPlayer($player);
 *@var Code SrClau
 **/
 public static function getFly(Player $player){
+if($player->hasPermission("fly.core")){
 if($player->getAllowFlight()){
 $player->setFlying(false);
 $player->setAllowFlight(false);
@@ -95,8 +96,11 @@ $player->setFlying(true);
 $player->setAllowFlight(true);
 $player->sendMessage("§aFly Enabled");
                  }
-          }
-
+ } else {
+ $player->sendMessage("§8[§eCF§8] §cYou do not have permissions to use");
+ }
+}
+  
 public static function getSize(Player $player){
 if($player->hasPermission("size.core")){
 $form = new SimpleForm (function (Player $player, int $data = null){
@@ -126,6 +130,6 @@ $form->addButton("§bNormal");
 $form->addButton("§cBig");
 $form->sendToPlayer($player);
 } else {
-$player->sendMessage("§8[§eCF§8] §c You do not have permissions to use");
+$player->sendMessage("§8[§eCF§8] §cYou do not have permissions to use");
 }
 }
