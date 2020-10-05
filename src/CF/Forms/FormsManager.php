@@ -60,7 +60,16 @@ $form->sendToPlayer($player);
 public static function getInfo(Player $player){
   
   }
-  
+
+public static function getFly(Player $player){
+if($player->getAllowFlight()){
+$player->setFlying(false);
+$player->setAllowFlight(false);
+$player->sendMessage("§8[§eCF§8] §cFly Disabled");
+}else{
+$player->setFlying(true);
+$player->setAllowFlight(true);
+$player->sendMessage("§8[§eCF§8] §aFly Enabled");
 }
 
 
