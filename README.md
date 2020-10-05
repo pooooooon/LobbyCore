@@ -4,9 +4,9 @@
     </a>
     <br><br>
     <h3>Instrucciones:</h3>
-    <p>.<p>
+    <p> <p>
     <h3>Dependencias:</h3>
-    <p>None.</p>
+    <p> </p>
     <h3>Comandos:</h3>
  </p>/core help: Commads Help <p>
 </div>
