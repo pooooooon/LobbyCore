@@ -19,7 +19,7 @@ $this->setDescription("§7Return to Hub");
 public function execute(CommandSender $player, Command $cmd, string $label, array $args){
 if(isset($args)){
 $player->sendMessage("§8[§eCF§8] §cUsage: §7/hub");
-returm false;
+return false;
 }
 $player->setFlying(false);
 $player->setAllowFlight(false);
