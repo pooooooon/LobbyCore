@@ -34,6 +34,26 @@ $form->sendToPlayer($player);
 }
   
 public static function getGames(Player $player){
+public static function getAjustes(Player $player){
+$form = new SimpleForm(function (Player $player, int $data = null){
+$resultado = $data;
+if($resultado === null){
+return true;
+}
+switch ($resultado){
+case 0:
+break;
+}
+});
+$form->setTitle("Title");
+$form->setContent("Content");
+$form->addButton("Game 1");
+$form->addButton("Game 2");
+$form->addButton("Game 3");
+$form->addButton("Game 4");
+$form->addButton("Game 5");
+$form->sendToPlayer($player);
+}
   
   
   }
