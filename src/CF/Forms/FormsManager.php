@@ -15,7 +15,13 @@ return true;
   }
 switch ($data){
 case 0:
-    
+self::getFly($player);    
+break;
+case 1:
+self::getSize($player);   
+break;
+case 2:
+self::getNickName($player);   
 break;
 }
 });
