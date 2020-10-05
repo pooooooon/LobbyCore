@@ -22,3 +22,4 @@ $this->getLogger()->info("Created by SrClauYT + iFail90");
 public static function getCore(): Main {
 return self::$instancia;
 }
+}
