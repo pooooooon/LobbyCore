@@ -53,9 +53,6 @@ $form->addButton("Game 4");
 $form->addButton("Game 5");
 $form->sendToPlayer($player);
 }
-  
-  
-  }
 
 public static function getInfo(Player $player){
 $form = new SimpleForm (function (Player $player, int $data = null){
@@ -76,5 +73,9 @@ $form->addButton("Ranks");
 $form->sendToPlayer($player);
 }
 
+public static function getFly(Player $player){
 
+}
+
+}
   
