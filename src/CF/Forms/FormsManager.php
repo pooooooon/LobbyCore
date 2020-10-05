@@ -33,6 +33,10 @@ $form->setContent("§aChoose a cosmetic");
 $form->addButton("§eFly"."\n"."§7Click here");
 $form->addButton("§eSize"."\n"."§7Click here");
 $form->addButton("§eNickName"."\n"."§7Click here");
+/**
+*@var Coming Soon....
+**/
+//$form->addButton("§eParticles"."\n"."§7Click here"); 
 $form->sendToPlayer($player);
 }
   
