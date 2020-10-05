@@ -8,7 +8,7 @@ use pocketmine\{Server, Player};
 use CF\Main;
 class Hub extends PluginCommand {
 
-private $plugin;
+public $plugin;
 
 public function __construct(Main $plugin){
 parent::_construct("hub", $plugin);
