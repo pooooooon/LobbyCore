@@ -33,10 +33,6 @@ $form->setContent("§aChoose a cosmetic");
 $form->addButton("§eFly"."\n"."§7Click here");
 $form->addButton("§eSize"."\n"."§7Click here");
 $form->addButton("§eNickName"."\n"."§7Click here");
-/**
-*@var Coming Soon....
-**/
-//$form->addButton("§eParticles"."\n"."§7Click here"); 
 $form->sendToPlayer($player);
 }
   
@@ -69,7 +65,7 @@ $form->sendToPlayer($player);
 **/ 
 public static function getInfo(Player $player){
 $form = new SimpleForm (function (Player $player, int $data = null){
-$resultado = $data
+$resultado = $data;
 if($resultado === null){
 return true;
 }
@@ -100,8 +96,31 @@ $player->setAllowFlight(true);
 $player->sendMessage("§aFly Enabled");
                  }
           }
- 
-public static function getNickName(Player $player){
-  
-  }
- }
+
+public static function getSize(Player $player){
+$form = new SimpleForm (function (Player $player, int $data = null){
+$resultado = $data;
+if($resultado === null){
+return true;
+}
+switch ($resultado){
+case 0:
+$player->setScale(0.5);
+$player->sendMessage("§eSmall Size Selected");
+break;
+case 1:
+$player->setScale(1.0);
+$player->sendMessage("§bNormal Size Selected");
+break;
+case 2:
+$player->setScale(0.5);
+$player->sendMessage ("§cBig Size Selected");
+break;
+});
+$form->setTitle("§aSize");
+$form->setContent("§eSelect The Size You Like");
+$form->addButton("§eSmall");
+$form->addButton("§bNormal");
+$form->addButton("§cBig");
+$form->sendToPlayer($player);
+}
