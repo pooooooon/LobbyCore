@@ -100,4 +100,8 @@ $player->setAllowFlight(true);
 $player->sendMessage("§aFly Enabled");
                  }
           }
+ 
+public static function getNickName(Player $player){
+  
   }
+ }
