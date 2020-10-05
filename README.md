@@ -1,5 +1,7 @@
 <a align="center"><img src="https://github.com/SrClau/LobbyCore/blob/main/icon.png"></img></a>
-	<br>
+<br>
+a href="https://discord.com">
+        <img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="discord">
     </a>
     <br><br>
     <h3>Help:</h3>
