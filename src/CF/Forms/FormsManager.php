@@ -28,11 +28,11 @@ self::getNickName($player);
 break;
 }
 });
-$form->setTitle("§b§kB§r§aCosmetics§b§kB§r §eUI");
+$form->setTitle("§b§kB§r§aCosmetics§b§kB§r");
 $form->setContent("§aChoose a cosmetic");
-$form->addButton("§eFly"."\n"."§7Click here");
-$form->addButton("§eSize"."\n"."§7Click here");
-$form->addButton("§eNickName"."\n"."§7Click here");
+$form->addButton("§fFly"."\n"."§eClick here");
+$form->addButton("§dSize"."\n"."§eClick here");
+$form->addButton("§cNickName"."\n"."§eClick here");
 $form->sendToPlayer($player);
 }
   
@@ -41,16 +41,15 @@ $form->sendToPlayer($player);
 **/ 
 public static function getGames(Player $player){
 $form = new SimpleForm(function (Player $player, int $data = null){
-$resultado = $data;
-if($resultado === null){
+if($data === null){
 return true;
 }
-switch ($resultado){
+switch ($data){
 case 0:
 break;
 }
 });
-$form->setTitle("Games");
+$form->setTitle("§e§KB§r§aGames§e§kB§r");
 $form->setContent("Select You Favorite Game");
 $form->addButton("Game 1");
 $form->addButton("Game 2");
@@ -65,20 +64,25 @@ $form->sendToPlayer($player);
 **/ 
 public static function getInfo(Player $player){
 $form = new SimpleForm (function (Player $player, int $data = null){
-$resultado = $data;
-if($resultado === null){
+if($data === null){
 return true;
 }
-switch ($resultado){
+switch ($data){
 case 0:
+self::getProfile;
 break;
+case 1:
+self::getServer;
+break;
+case 2;
+self::getRanks;
 }
 });
-$form->setTitle("Information");
-$form->setContent("General Information");
-$form->addButton("My Profile");
-$form->addButton("Server");
-$form->addButton("Ranks");
+$form->setTitle("§a§kA§r§bInformation§a§kA§r");
+$form->setContent("§eGeneral Information");
+$form->addButton("aMy Profile"."\n"."§eTap To View");
+$form->addButton("§fServer"."\n"."§eTap To View");
+$form->addButton("§dRanks"."\n"."§eTap To View");
 $form->sendToPlayer($player);
 }
 
@@ -100,15 +104,16 @@ $player->sendMessage("§aFly Enabled");
  $player->sendMessage("§8[§eCF§8] §cYou do not have permissions to use");
  }
 }
-  
+/**
+*@var Code iFail90
+**/
 public static function getSize(Player $player){
 if($player->hasPermission("size.core")){
 $form = new SimpleForm (function (Player $player, int $data = null){
-$resultado = $data;
-if($resultado === null){
+if($data === null){
 return true;
 }
-switch ($resultado){
+switch ($data){
 case 0:
 $player->setScale(0.5);
 $player->sendMessage("§eSmall Size Selected");
@@ -134,18 +139,11 @@ $player->sendMessage("§8[§eCF§8] §cYou do not have permissions to use");
 }
 }
 
- public static function getNickName(Player $player){
- $form = new CustomForm(function (Player $player, array $data = null){
- if($data == null){
- self::getNickName($player);
-return true;
+public static function getProfile(Player $player){
+$player->sendMessage("§aMy NickName: §f".$player->getName()."\n"."§aMy Ping: §f".$player->getPing());
 }
-$player->setDisplayName("$data[0]");
-$player->setNameTag("$data[0]");
-$player->sendMessage("§8[§eCF§8] §aYou have changed your name to ".$data[0]);
-});
-$form->setTitle("§aNickName");
-$form->addInput("Choose the name that you like the most", "Fail And Clau");
-$form->sendToPlayer($player);
-}
-
+/**
+* public static function getServer
+*
+* public static function getRanks
+**/
