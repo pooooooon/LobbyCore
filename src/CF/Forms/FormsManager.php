@@ -38,7 +38,7 @@ $form->sendToPlayer($player);
   
 /**
 *@var Code iFail90
-**/ 
+**/
 public static function getGames(Player $player){
 $form = new SimpleForm(function (Player $player, int $data = null){
 if($data === null){
@@ -59,9 +59,6 @@ $form->addButton("Game 5");
 $form->sendToPlayer($player);
 }
 
-/**
-*@var Code iFail90
-**/ 
 public static function getInfo(Player $player){
 $form = new SimpleForm (function (Player $player, int $data = null){
 if($data === null){
