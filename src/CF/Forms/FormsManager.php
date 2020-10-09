@@ -66,13 +66,13 @@ return true;
 }
 switch ($data){
 case 0:
-self::getProfile;
+self::getProfile($player);
 break;
 case 1:
-self::getServer;
+self::getServer($player);
 break;
 case 2;
-self::getRanks;
+self::getRanks($player);
 }
 });
 $form->setTitle("§a§kA§r§bInformation§a§kA§r");
@@ -141,6 +141,70 @@ $player->sendMessage("§aMy NickName: §f".$player->getName()."\n"."§aMy Ping: 
 }
 /**
 * public static function getServer
-*
-* public static function getRanks
 **/
+public static function getRanks(Player $player){
+$form = new SimpleForm (function (Player $player , int $data = null){
+if($data === null){
+return true;
+}
+switch ($data){
+case 0:
+self::getPublicRanks($player);
+break;
+case 1:
+self::getBuyRanks($player);
+break;
+case 3:
+$this->getCosmetic($player);
+}
+});
+$form->setTitle("§a§kA§eE§bB§r§FRanks§a§kA§eE§bB§r");
+$form->setContent("§eRanks Info");
+$form->addButton("§fRanks");
+$form->addButton("§fHow To Buy");
+$form->addButton("§cBack");
+$form->sendToPlayer ($player);
+}
+
+public function getPublicRanks(Player $player){
+$form = new SimpleForm (function(Player $player , int $data = null){
+if($data === null){
+return true;
+}
+switch ($data){
+case 0:
+self::getRank1($player);
+break;
+case 1:
+self::getRank2($player);
+break;
+case 2:
+self:getRank3($player);
+break;
+case 3:
+$this->getRanks($player);
+break;
+}
+});
+/**
+*@here You can edit the name of the ranks buttons here
+**/
+$form->setTitle("Ranks");
+$form->setContent("Available Ranks");
+$form->addButton("Example Rank 1");
+$form->addButton("Example Rank 2");
+$form->addButton("Example Rank 3");
+$form->addButton("§cBack);
+$form->sendToPlayer($player);
+}
+public static function getRank1(Player $player){
+$form = new SimpleForm (function (Player $player , int $data = null){
+if($data === null){
+return true;
+}
+switch ($data){
+case 0:
+break;
+}
+});
+}
