@@ -194,7 +194,7 @@ $form->setContent("Available Ranks");
 $form->addButton("Example Rank 1");
 $form->addButton("Example Rank 2");
 $form->addButton("Example Rank 3");
-$form->addButton("§cBack);
+$form->addButton("§cBack");
 $form->sendToPlayer($player);
 }
 public static function getRank1(Player $player){
