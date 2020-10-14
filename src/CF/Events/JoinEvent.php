@@ -14,7 +14,8 @@ use pocketmine\item\Item;
 **/
 use pocketmine\level\{Position, Level};
 use CF\Main;
-class EventJoin implements LT {
+use CF\Forms\FormsManager;
+class JoinEvent implements LT {
 
 public function onJoinEvent(PlayerJoinEvent $event){
 $player = $event->getPlayer();
@@ -25,6 +26,7 @@ Main::Items()->getItems($player);
 
 public function onRespawn(PlayerRespawnEvent $event){
 $player = $event->getPlayer();
+Main::Items()->getItems($player);
 //$event->setRespawnPosition();
 }
 
