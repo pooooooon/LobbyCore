@@ -8,9 +8,6 @@ use CF\Forms\{CustomForm, SimpleForm, ModalForm};
 
 class FormsManager {
 
-/**
-*@var Code SrClau
-**/ 
 public static function getCosmetic(Player $player){
 $form = new SimpleForm(function (Player $player, int $data = null){
 if($data === null){
@@ -36,9 +33,6 @@ $form->addButton("§cNickName"."\n"."§eClick here");
 $form->sendToPlayer($player);
 }
   
-/**
-*@var Code iFail90
-**/
 public static function getGames(Player $player){
 $form = new SimpleForm(function (Player $player, int $data = null){
 if($data === null){
@@ -83,9 +77,6 @@ $form->addButton("§dRanks"."\n"."§eTap To View");
 $form->sendToPlayer($player);
 }
 
-/**
-*@var Code SrClau
-**/
 public static function getFly(Player $player){
 if($player->hasPermission("fly.core")){
 if($player->getAllowFlight()){
@@ -101,9 +92,6 @@ $player->sendMessage("§aFly Enabled");
  $player->sendMessage("§8[§eCF§8] §cYou do not have permissions to use");
  }
 }
-/**
-*@var Code iFail90
-**/
 public static function getSize(Player $player){
 if($player->hasPermission("size.core")){
 $form = new SimpleForm (function (Player $player, int $data = null){
