@@ -4,7 +4,6 @@ namespace CF;
 
 use pocketmine\utils\TextFormat as Text;
 use pocketmine\item\Item;
-use pocketmine\scheduler\Task;
 use pocketmine\utils\Config;
 use pocketmine\level\Position;
 use pocketmine\{Player, Server};
