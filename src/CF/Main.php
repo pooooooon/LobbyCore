@@ -7,6 +7,7 @@ use pocketmine\event\Listener as LT;
 use pocketmine\{Player, Server};
 use CF\ScoreAPI;
 use CF\Commands\{Hub, Core};
+use CF\Manager\{Items};
 class Main extends PB implements LT {
 
 public static $instancia;
@@ -26,5 +27,9 @@ $this->scoreapi = new ScoreAPI($this);
 
 public static function getCore(): Main {
 return self::$instancia;
+}
+
+public static function Items(){
+return new Items($this);
 }
 }
