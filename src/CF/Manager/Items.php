@@ -20,7 +20,12 @@ $this->plugin = $plugin
 }
 
 public function getItems(Player $player){
-
+$player->setHealth(20);
+$player->setFood(20);
+$player->setScale(1);
+$player->removeAllEffects();
+$player->getArmorInventory()->clearAll();
+$player->getInventory()->clearAll();
 $inventory = $player->getInventory();
 $inventory->setItem(5, Item::get(345, 0, 1)->setCustomName("§1§kA§r§bTravel§1§kA"));
 $inventory->setItem(0, Item::get(234, 0, 1)->setCustomName("§b§kB§r§aCosmetics§b§kB"));
