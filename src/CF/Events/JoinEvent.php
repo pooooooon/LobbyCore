@@ -13,12 +13,13 @@ use pocketmine\item\Item;
 * @var Needed for teleportation of the selected world 
 **/
 use pocketmine\level\{Position, Level};
-
+use CF\Main;
 class EventJoin implements LT {
 
 public function onJoinEvent(PlayerJoinEvent $event){
 $player = $event->getPlayer();
 $event->setJoinMessage("");
+Main::Items()->giveItems($player);
 //$player->teleport();
 }
 
