@@ -69,7 +69,7 @@ case 0:
 self::getProfile($player);
 break;
 case 1:
-self::getServer($player);
+self::getServerInfo($player);
 break;
 case 2;
 self::getRanks($player);
@@ -137,11 +137,37 @@ $player->sendMessage("§8[§eCF§8] §cYou do not have permissions to use");
 }
 
 public static function getProfile(Player $player){
-$player->sendMessage("§aMy NickName: §f".$player->getName()."\n"."§aMy Ping: §f".$player->getPing());
+$rank = Server::getInstance()->getPluginManager()->getPlugin("PurePerms")->getUserDataMgr($player)->getGroup($player);
+$form = new SimpleForm (function (Player $player , int $data = null){
+if($data === null){
+return true;
 }
-/**
-* public static function getServer
-**/
+switch ($data){
+case 0:
+$this->getInfo($player);
+break;
+}
+});
+$form->setTitle("My Profile Info");
+$form->setContent("NickName: $player->getName()" . "\n" . "Ping: $player->getPing()" . "\n" . "Rank: $rank");
+$form->addButton ("§l§cBack");
+$form->sendToPlayer($player);
+}
+
+public static function getServerInfo(Player $player){
+$form = new SimpleForm (function (Player $player , int $data = null){
+if($data === null){
+return true;
+}
+switch ($data){
+case 0:
+break;
+}
+});
+$form->setTitle("Server Info");
+$form->setContent ("Server Name: Example Name" . "\n" . "Online: " . "\n" . "" . "Shop: link" . "\n" . "Ip: exampleip.xyz");
+}
+
 public static function getRanks(Player $player){
 $form = new SimpleForm (function (Player $player , int $data = null){
 if($data === null){
@@ -186,9 +212,6 @@ $this->getRanks($player);
 break;
 }
 });
-/**
-*@here You can edit the name of the ranks buttons here
-**/
 $form->setTitle("Ranks");
 $form->setContent("Available Ranks");
 $form->addButton("Example Rank 1");
@@ -205,10 +228,12 @@ return true;
 switch ($data){
 case 0:
 $this->getRanks($player);
+break;
 }
 });
 $form->setTitle("How To Buy");
 $form->setContent ("You can edit this text by adding " . "\n" . "Shop: Link" . "\n" . "Prices: $ , € , ¥" . "\n" . "Contact: exampleemail@tcf.com");
 $form->addButton("§l§cBack");
+$form->sendToPlayer($player);
 }
 }
