@@ -197,14 +197,18 @@ $form->addButton("Example Rank 3");
 $form->addButton("§cBack");
 $form->sendToPlayer($player);
 }
-public static function getRank1(Player $player){
+public static function getBuyRaks(Player $player){
 $form = new SimpleForm (function (Player $player , int $data = null){
 if($data === null){
 return true;
 }
 switch ($data){
 case 0:
-break;
+$this->getRanks($player);
 }
 });
+$form->setTitle("How To Buy");
+$form->setContent ("You can edit this text by adding " . "\n" . "Shop: Link" . "\n" . "Prices: $ , € , ¥" . "\n" . "Contact: exampleemail@tcf.com");
+$form->addButton("§l§cBack");
+}
 }
