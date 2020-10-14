@@ -8,7 +8,7 @@ use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\utils\TextFormat as Text;
 /**
-* @var Just in case
+* @var Just in case (fake)
 **/
 use pocketmine\item\Item;
 /**
@@ -44,10 +44,13 @@ $player->getInventory()->clearAll();
 public function InteractionItem(PlayerInteractEvent $event){
 $player = $event->getPlayer();
 $item = $event->getItem();
-if($item->getCustomName() == ""){
-  
-}else if($item->getCustomName() == ""){
-}else if($item->getCustomName() == ""){
-}
+if($item->getCustomName() == "§1§kA§r§bTravel§1§kA"){
+FormsManager::getGames($player);
+}else if($item->getCustomName() == "§b§kB§r§aCosmetics§b§kB"){
+FormsManager::getCosmetic($player);
+}else if($item->getCustomName() == "§e§kC§e§fInformation§e§kC"){
+FormsManager::getInfo($player);
+      }
+   }
 }
 ?>
