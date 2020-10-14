@@ -6,7 +6,7 @@ use pocketmine\event\Listener as LT;
 use pocketmine\{Player, Server};
 use pocketmine\utils\{Config, TextFormat as CF};
 use pocketmine\event\player\{PlayerQuitEvent};
-
+use CF\Main;
 class LeaveEvent implements Listener {
   
 public function EventLeave(PlayerQuitEvent $event){
