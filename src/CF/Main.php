@@ -10,17 +10,17 @@ use CF\Commands\{Hub, Core};
 class Main extends PB implements LT {
 
 public static $instancia;
-
+public $prefix = "[LobbyCore] ";
 public function onLoad(){
 self::$instancia = $this;
-$this->getLogger()->info("Loading LobbyCore..");
+$this->getLogger()->info($this->prefix."Loading LobbyCore..");
 }
 
 public function onEnable(){
 $this->getServer()->getCommandMap()->register("hub", new Hub($this));
 $this->getServer()->getCommandMap()->register("core", new Core($this));
-$this->getLogger()->notice("Plugin LobbyCore Enabled");
-$this->getLogger()->info("Created by SrClauYT + iFail90");
+$this->getLogger()->notice($this->prefix."Plugin LobbyCore Enabled");
+$this->getLogger()->info($this->prefix."Created by SrClauYT + iFail90");
 $this->scoreapi = new ScoreAPI($this);
 }
 
