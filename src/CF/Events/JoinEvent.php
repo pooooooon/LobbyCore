@@ -19,7 +19,7 @@ class EventJoin implements LT {
 public function onJoinEvent(PlayerJoinEvent $event){
 $player = $event->getPlayer();
 $event->setJoinMessage("");
-Main::Items()->giveItems($player);
+Main::Items()->getItems($player);
 //$player->teleport();
 }
 
