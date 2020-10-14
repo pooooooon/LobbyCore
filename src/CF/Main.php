@@ -23,8 +23,6 @@ $this->getServer()->getCommandMap()->register("hub", new Hub($this));
 $this->getServer()->getCommandMap()->register("core", new Core($this));
 $this->getServer()->getPluginManager()->registerEvents(new JoinEvent(), $this);
 $this->getServer()->getPluginManager()->registerEvents(new LeaveEvent(), $this);
-$this->getServer()->getPluginManager()->registerEvents(new LeaveEvent(), $this);
-$this->getServer()->getPluginManager()->registerEvents(new LeaveEvent(), $this);
 $this->getLogger()->notice($this->prefix."Plugin LobbyCore Enabled");
 $this->getLogger()->info($this->prefix."Created by SrClauYT + iFail90");
 $this->scoreapi = new ScoreAPI($this);
