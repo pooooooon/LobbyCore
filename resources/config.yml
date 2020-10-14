@@ -1,3 +1,22 @@
 ---
 #Created by SrClauYT and iFail90
+prefix-myserver: "§bLitCube"
+join-msg: "§8> §aUnio al Servidor"
+leave-msg: "§8> §cSalio del Servidor"
+
+cmd-game1: /ffa join
+cmd-game2: /ffa join
+cmd-game3: /ffa join
+cmd-game4: /ffa join
+
+button-game1: "§eFree For All"
+button-game2: "§eGapple"
+button-game3: "§eNoDebuff"
+button-game4: "SkyWars"
+
+button-cosmetic1: "§eFly"
+button-cosmetic2: "§eSize"
+button-cosmetic3: "§eNickName"
+button-cosmetic4: "Partciles"
+
 ...
