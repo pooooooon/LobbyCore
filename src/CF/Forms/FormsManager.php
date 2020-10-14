@@ -155,6 +155,8 @@ $form->sendToPlayer($player);
 }
 
 public static function getServerInfo(Player $player){
+$online = count(Server::getInstance()->getOnlinePlayers());
+$max = count(Server::getInstance()->getMaxPlayers());
 $form = new SimpleForm (function (Player $player , int $data = null){
 if($data === null){
 return true;
@@ -165,7 +167,7 @@ break;
 }
 });
 $form->setTitle("Server Info");
-$form->setContent ("Server Name: Example Name" . "\n" . "Online: " . "\n" . "" . "Shop: link" . "\n" . "Ip: exampleip.xyz");
+$form->setContent ("Server Name: Example Name" . "\n" . "Online: " . "\n" . "$online / $max" . "Shop: link" . "\n" . "Ip: exampleip.xyz");
 }
 
 public static function getRanks(Player $player){
