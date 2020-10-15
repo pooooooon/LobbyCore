@@ -1,8 +1,9 @@
 ---
 #Created by SrClauYT and iFail90
-prefix-myserver: "§bLitCube"
-join-msg: "§8> §aUnio al Servidor"
-leave-msg: "§8> §cSalio del Servidor"
+#Decoration: »    |     «");
+prefix-myserver: "§8[§bLitCube§8]"
+join-msg: "§8» §aJoined the Server"
+leave-msg: "§8» §cLeft the Server"
 
 cmd-game1: /ffa join
 cmd-game2: /ffa join
