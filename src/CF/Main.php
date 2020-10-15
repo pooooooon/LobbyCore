@@ -16,6 +16,7 @@ public $prefix = "[LobbyCore] ";
 public function onLoad(){
 self::$instancia = $this;
 $this->getLogger()->info($this->prefix."Loading LobbyCore..");
+$this->saveResource("config.yml");
 }
 
 public function onEnable(){
