@@ -17,6 +17,5 @@ public static function createHubSpawn(Player $player){
 }
 
 public static function getWorldHub(){
-//return
 }
 }
