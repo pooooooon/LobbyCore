@@ -43,7 +43,7 @@ case 0:
 break;
 }
 });
-$form->setTitle("§e§KB§r§aGames§e§kB§r");
+$form->setTitle("§e§kB§r§aGames§e§kB");
 $form->setContent("Select You Favorite Game");
 $form->addButton("Game 1");
 $form->addButton("Game 2");
@@ -67,11 +67,12 @@ self::getServerInfo($player);
 break;
 case 2;
 self::getRanks($player);
+break;
 }
 });
 $form->setTitle("§a§kA§r§bInformation§a§kA§r");
 $form->setContent("§eGeneral Information");
-$form->addButton("aMy Profile"."\n"."§eTap To View");
+$form->addButton("My Profile"."\n"."§eTap To View");
 $form->addButton("§fServer"."\n"."§eTap To View");
 $form->addButton("§dRanks"."\n"."§eTap To View");
 $form->sendToPlayer($player);
@@ -108,8 +109,11 @@ $player->setScale(1.0);
 $player->sendMessage("§bNormal Size Selected");
 break;
 case 2:
-$player->setScale(0.5);
+$player->setScale(1.5);
 $player->sendMessage ("§cBig Size Selected");
+break;
+case 3:
+self::getCosmetic($player); 
 break;
 }
 });
@@ -118,6 +122,7 @@ $form->setContent("§eSelect The Size You Like");
 $form->addButton("§eSmall");
 $form->addButton("§bNormal");
 $form->addButton("§cBig");
+$form->addButton("§cLeave",0,"textures/ui/check");
 $form->sendToPlayer($player);
 } else {
 $player->sendMessage("§8[§eCF§8] §cYou do not have permissions to use");
@@ -132,30 +137,33 @@ return true;
 }
 switch ($data){
 case 0:
-$this->getInfo($player);
+self::getInfo($player);
 break;
 }
 });
 $form->setTitle("My Profile Info");
-$form->setContent("NickName: $player->getName()" . "\n" . "Ping: $player->getPing()" . "\n" . "Rank: $rank");
+$form->setContent("NickName: ".$player->getName() . "\n" . "Ping: ".$player->getPing() . "\n" . "Rank: ".$rank."\n" . "\n" . "Kills: " . "\n" . "Deaths: ");
 $form->addButton ("§l§cBack");
 $form->sendToPlayer($player);
 }
 
 public static function getServerInfo(Player $player){
 $online = count(Server::getInstance()->getOnlinePlayers());
-$max = count(Server::getInstance()->getMaxPlayers());
+$max = Server::getInstance()->getMaxPlayers();
 $form = new SimpleForm (function (Player $player , int $data = null){
 if($data === null){
 return true;
 }
 switch ($data){
 case 0:
+self::getInfo($player);
 break;
 }
 });
 $form->setTitle("Server Info");
-$form->setContent ("Server Name: Example Name" . "\n" . "Online: " . "\n" . "$online / $max" . "Shop: link" . "\n" . "Ip: exampleip.xyz");
+$form->setContent ("Server Name: Example Name" . "\n" . "Online: " . "\n" . $online . "/" . $max . "Shop: link" . "\n" . "Ip: exampleip.xyz");
+$form->addButton("§cBack");
+$form->sendToPlayer($player);
 }
 
 public static function getRanks(Player $player){
@@ -171,7 +179,8 @@ case 1:
 self::getBuyRanks($player);
 break;
 case 3:
-$this->getCosmetic($player);
+self::getInfo($player);
+break;
 }
 });
 $form->setTitle("§a§kA§eE§bB§r§FRanks§a§kA§eE§bB§r");
@@ -179,45 +188,33 @@ $form->setContent("§eRanks Info");
 $form->addButton("§fRanks");
 $form->addButton("§fHow To Buy");
 $form->addButton("§cBack");
-$form->sendToPlayer ($player);
+$form->sendToPlayer($player);
 }
 
-public function getPublicRanks(Player $player){
+public static function getPublicRanks(Player $player){
 $form = new SimpleForm (function(Player $player , int $data = null){
 if($data === null){
 return true;
 }
 switch ($data){
 case 0:
-self::getRank1($player);
-break;
-case 1:
-self::getRank2($player);
-break;
-case 2:
-self:getRank3($player);
-break;
-case 3:
-$this->getRanks($player);
+self::getRanks($player);
 break;
 }
 });
 $form->setTitle("Ranks");
 $form->setContent("Available Ranks");
-$form->addButton("Example Rank 1");
-$form->addButton("Example Rank 2");
-$form->addButton("Example Rank 3");
 $form->addButton("§cBack");
 $form->sendToPlayer($player);
 }
-public static function getBuyRaks(Player $player){
+public static function getBuyRanks(Player $player){
 $form = new SimpleForm (function (Player $player , int $data = null){
 if($data === null){
 return true;
 }
 switch ($data){
 case 0:
-$this->getRanks($player);
+self::getRanks($player);
 break;
 }
 });
