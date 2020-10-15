@@ -35,4 +35,8 @@ return self::$instancia;
 public static function Items(){
 return new Items();
 }
+ 
+public static function Config(){
+return new Config(Main::getCore()->getDataFolder() . "config.yml", Config::YAML);
+}
 }
