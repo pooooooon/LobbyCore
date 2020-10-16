@@ -142,7 +142,7 @@ break;
 }
 });
 $form->setTitle("My Profile Info");
-$form->setContent("NickName: ".$player->getName() . "\n" . "Ping: ".$player->getPing() . "\n" . "Rank: ".$rank."\n" . "\n" . "Kills: " . "\n" . "Deaths: ");
+$form->setContent("NickName: " . $player->getName() . "\n" . "Ping: " . $player->getPing() . "\n" . "Rank: " .$rank. "\n" . "\n" . "Kills: " . "\n" . "Deaths: ");
 $form->addButton ("§l§cBack");
 $form->sendToPlayer($player);
 }
@@ -203,7 +203,7 @@ break;
 }
 });
 $form->setTitle("Ranks");
-$form->setContent("Available Ranks");
+$form->setContent("Available Ranks" . "\n" . "Add the ranks, their prices and benefits here ");
 $form->addButton("§cBack");
 $form->sendToPlayer($player);
 }
