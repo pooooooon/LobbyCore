@@ -10,13 +10,12 @@ class HubCreate {
 
 public static function createHub(Player $player, string $mundo){
 $hub = new Config(Main::getCore()->getDataFolder() . "hub.yml", Config::YAML);
-
+$hub->set("Level", $mundo);
+$hub->set("Spawns", [
+$player->getFloorX(),
+$player->getFloorY(),
+$player->getFloorZ()
+]);
 }
 
-public static function createHubSpawn(Player $player){
-  
-}
-
-public static function getWorldHub(){
-}
 }
