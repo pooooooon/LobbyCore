@@ -8,10 +8,9 @@
     </a>
 <br><br>
 
-❌ Configurable UI
-❌ Stable
+✔️ Stable
 
-<br>
+</br>
 
 </div>
 
