@@ -11,7 +11,10 @@ class LeaveEvent implements LT {
   
 public function EventLeave(PlayerQuitEvent $event){
 $player = $event->getPlayer();
-$nombre = $olayer->getName();
+$config = Main::Config();
+$name = $player->getName();
 $event->setQuitMessage("");
+
+Server::getInstance()->broadcastMessage($config->get("prefix-myserver") . " §f" . $name . " " . $config->get("leave-msg"));
 }
 }
