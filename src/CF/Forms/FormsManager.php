@@ -279,3 +279,4 @@ $form->setContent($config->get("text-buyrank") . "\n" . "Shop: " . $config->get(
 $form->addButton("§l§cBack",0,"textures/ui/check");
 $form->sendToPlayer($player);
 }
+}
