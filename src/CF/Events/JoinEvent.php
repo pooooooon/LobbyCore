@@ -47,7 +47,7 @@ FormsManager::getGames($player);
 }else if($item->getCustomName() == "§b§kB§r§aCosmetics§b§kB"){
 $event->setCancelled();
 FormsManager::getCosmetic($player);
-}else if($item->getCustomName() == "§e§kC§r§e§fInformation§e§kC"){
+}else if($item->getCustomName() == "§e§kC§r§fInformation§e§kC"){
 FormsManager::getInfo($player);
       }
    }
