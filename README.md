@@ -20,7 +20,7 @@ Bug reports to [GitHub](https://github.com/SrClau/LobbyCore/issues/new/choose)
 
 # Future Implementations
 
-None...
+- [] Scoreboard
 
 # Commands
 
