@@ -16,6 +16,7 @@ use pocketmine\item\Item;
 use pocketmine\level\{Position, Level};
 use CF\Main;
 use CF\Forms\{FormsManager};
+use CF\Manager\HubCreate;
 class JoinEvent implements LT {
 
 public function onJoinEvent(PlayerJoinEvent $event){
@@ -24,14 +25,18 @@ $config = Main::Config();
 $name = $player->getName();
 $event->setJoinMessage("");
 Main::Items()->getItems($player);
-//$player->teleport();
+if(HubCreate::getWorld()){
+$player->teleport(HubCreate::TeleportHub());
+} else {
+$player->sendMessage("No world");
+}
 Server::getInstance()->broadcastMessage($config->get("prefix-myserver") . " §f" . $name . " " . $config->get("join-msg"));
 }
 
 public function onRespawn(PlayerRespawnEvent $event){
 $player = $event->getPlayer();
 Main::Items()->getItems($player);
-//$event->setRespawnPosition();
+$event->setRespawnPosition(HubCreate::TeleportHub());
 }
 
 public function InteractionItem(PlayerInteractEvent $event){
