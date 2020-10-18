@@ -5,10 +5,11 @@ namespace CF;
 use pocketmine\plugin\PluginBase as PB;
 use pocketmine\event\Listener as LT;
 use pocketmine\{Player, Server};
+use pocketmine\utils\{Config, TextFormat as Text};
 use CF\ScoreAPI;
 use CF\Commands\{Hub, Core};
 use CF\Manager\{Items};
-use CF\Events\{LeaveEvent, JoinEvent};
+use CF\Events\{JoinEvent,LeaveEvent};
 class Main extends PB implements LT {
 
 public static $instancia;
@@ -36,7 +37,7 @@ return self::$instancia;
 public static function Items(){
 return new Items();
 }
- 
+
 public static function Config(){
 return new Config(Main::getCore()->getDataFolder() . "config.yml", Config::YAML);
 }
