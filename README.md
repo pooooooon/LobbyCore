@@ -26,4 +26,5 @@ None...
 
 - /core help: Plugin command list
 - /core sethub: Select hub
+- /core setspawn: Select Spawn
 - /hub: Teleport to the selected hub
