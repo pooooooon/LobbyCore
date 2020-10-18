@@ -20,9 +20,8 @@ button-game5: "§eBedWars"
 button-cosmetic4: "Particles"
 cmd-cosmetic4: "help"
 
-#Only for advanced users since this is not done by anyone, it may give errors Crashs or more We are not responsible for errors when editing this
-#I'm sorry I do this with the translator
-#Solo para advanzados ya que esto no lo hace cualquiera puede dar errores Crashs o mas No somos responsables de los errores al editar esto
+#Procure tener cuidado al mome6de editar esto, no nos hacemos responsables de cualquier error que ocurra debido a una mala edición.
+#Be careful when editing this, we are not responsible for any errors that occur due to bad editing.
 
 #Server UI
 
@@ -35,7 +34,7 @@ IP: "play.exemple.xyz"
 content-ranks: "Ranks \n \n Test \n \n Test1 \n \n Test2 \n \n Test3 \n \n :D"
 
 text-buyrank: "Test"
-text-shop: "shop.examle.net"
+text-shop: "shop.example.net"
 text-prices: "$"
 text-contact: "exampleemail@tcf.com"
 ...
