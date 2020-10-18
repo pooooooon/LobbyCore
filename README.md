@@ -20,8 +20,8 @@ Bug reports to [GitHub](https://github.com/SrClau/LobbyCore/issues/new/choose)
 
 # Future Implementations
 
-- [✔ ] Scoreboard
-- [✔ ] Items Configurable
+- [ ] Scoreboard
+- [ ] Items Configurable
 
 # Commands
 
