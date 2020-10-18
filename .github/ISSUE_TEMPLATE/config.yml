@@ -4,7 +4,7 @@ contact_links:
     about: Receive support in our discord
   - name: Support on Wikis
     url: https://discord.gg/Js63vy7
-    about: We do not have for now to send you our discord
+    about: We do not have for now we send you our discord
   - name: Documentation
-    url: https://github.com/SrClau/LobbyCore/README.md
+    url: https://github.com/SrClau/LobbyCore
     about: Our documentation :D
